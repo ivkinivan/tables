@@ -13,7 +13,7 @@ def index():
         name = request.form.get('name')
         tel = request.form.get('tel')
         message = request.form.get('message')
-       # sendEmail(mail, render_template('mail.html', name = name, tel = tel, message = message), "Новая заявка")
+        sendEmail(mail, render_template('mail.html', name = name, tel = tel, message = message), "Новая заявка")
         flash('Заявка отправлена')
     return render_template('index.html')
 
