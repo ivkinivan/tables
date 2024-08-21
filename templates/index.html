@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Финансовый учет для бизнеса</title>
     <link rel="stylesheet" href="static/fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="static/slick/slick.css">
@@ -268,9 +269,8 @@ https://www.tooplate.com/view/2117-infinite-loop
                   {% for msg in get_flashed_messages() %}
                   <div class = "flash text-center my-1">{{msg}}</div>
                   {% endfor %}
-                <input id="name" name="name" type="text" placeholder="Имя" class="tm-input" required />
+                <input id="name" name="name" type="text"  pattern = "^[А-Яа-яЁё\s]{0,30}" placeholder="Имя" class="tm-input" required />
                 <input id="telephone" name="telephone" type="tel" placeholder="Ваш телефон" class="tm-input" required />
-                <textarea id="message" name="message" rows="8" placeholder="Опишите ваши пожелания по таблице" class="tm-input" required></textarea>
                 <button type="submit" class="btn tm-btn-submit">Отправить</button>
               </form>
             </div>
